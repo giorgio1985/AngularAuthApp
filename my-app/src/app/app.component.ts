@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule, FormGroup } from '@angular/forms';
+
+
 
 
 @Component({
@@ -9,4 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'my-app';
+  onSubmit() {
+  alert("Cliccato ok");
+  }
 }

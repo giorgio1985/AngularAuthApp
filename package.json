@@ -1,0 +1,24 @@
+{
+  "name": "angularauthapp",
+  "version": "1.0.0",
+  "description": "my angular 7 app",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giorgio1985/AngularAuthApp.git"
+  },
+  "keywords": [
+    "key"
+  ],
+  "author": "giorgio85",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giorgio1985/AngularAuthApp/issues"
+  },
+  "homepage": "https://github.com/giorgio1985/AngularAuthApp#readme"
+}
