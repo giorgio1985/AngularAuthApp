@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Customs } from './customs';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 registerForm: FormGroup;
 customs = new Customs();
 
-constructor(private formBuilder: FormBuilder) {}
+constructor(private formBuilder: FormBuilder, private router: Router) {}
 
 ngOnInit() {
 	this.registerForm = this.formBuilder.group({
@@ -28,8 +28,17 @@ ngOnInit() {
 
  this.customs.email = this.registerForm.value.email;
  this.customs.password = this.registerForm.value.password;
+
+ if(this.registerForm.invalid) {
+alert("errore");
+
+ } else if(!this.registerForm.invalid) {
+ alert("Benvenuto: "+ this.customs.email);
+ return this.router.navigateByUrl("/welcome");
+
+
+ }
  
- alert(this.customs.email);
 
  }
 
