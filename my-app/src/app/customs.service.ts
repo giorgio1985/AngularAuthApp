@@ -7,9 +7,11 @@ import { Customs } from './customs';
 })
 export class CustomsService {
 
+// qui inserito url del back end
+
   constructor(private http: HttpClient, private customs: Customs) { }
 
-  anagrafica(customs) {
+  //anagrafica(customs)   {
   //this.http.post() 
   }
 
