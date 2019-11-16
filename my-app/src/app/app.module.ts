@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Customs } from './customs';
+
 
 @NgModule({
   declarations: [
@@ -13,14 +16,17 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     WelcomeComponent,
     LoginComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [Customs],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

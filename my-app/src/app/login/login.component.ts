@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Customs } from '../customs';
+import { CustomsService } from '../customs.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
 registerForm: FormGroup;
 customs = new Customs();
 
-constructor(private formBuilder: FormBuilder, private router: Router) {}
+constructor(private formBuilder: FormBuilder, private router: Router, private cs: CustomsService) {}
 
 ngOnInit() {
 	this.registerForm = this.formBuilder.group({
@@ -35,7 +36,7 @@ alert("errore");
 
  } else if(!this.registerForm.invalid) {
  if(this.customs.email == 'giorgio@yahoo.it' && this.customs.password == 'adonoo') {
-//anagrafica(customs);
+this.cs.anagrafica(this.customs);
  alert("Benvenuto: "+ this.customs.email);
  this.router.navigateByUrl("/welcome"); 
 
