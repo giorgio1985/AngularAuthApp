@@ -10,12 +10,19 @@ export class CustomsService {
 
 url1 = environment.url + 'registers';
 
+
+
+
   constructor(private http: HttpClient, private customs: Customs) { }
 
   anagrafica(customs)   {
-//  this.http.post<Customs>(url, customs) {}  //endpoint non ancora pronto 
-  console.log('custom.service.ts file')
+this.http.post<Customs>(this.url1, customs).subscribe( () => {
+	 console.log('custom.service.ts file');
   console.log(customs);
+}); 
+	
+
+ 
  }
 
 }

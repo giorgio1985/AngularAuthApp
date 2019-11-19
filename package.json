@@ -1,9 +1,13 @@
 {
-  "name": "angularauthapp",
+  "name": "mypackage",
   "version": "1.0.0",
   "description": "my angular 7 app",
   "main": "server.js",
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "test"
