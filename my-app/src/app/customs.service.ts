@@ -8,21 +8,22 @@ import { environment } from '../environments/environment';
 })
 export class CustomsService {
 
-url1 = environment.url + 'registers';
+url1 = environment.url + 'registers/login';
 
 
 
 
   constructor(private http: HttpClient, private customs: Customs) { }
 
-  anagrafica(customs)   {
-this.http.post<Customs>(this.url1, customs).subscribe( () => {
-	 console.log('custom.service.ts file');
-  console.log(customs);
-}); 
-	
 
- 
- }
+   public anagrafica(customs) {
+   // const headers = this.auth.getHeaders(false);
+   console.log("urrraaaaaa");
+    return this.http.post(this.url1, customs, {
+    //  headers: headers
+    })
+
+
+}
 
 }
