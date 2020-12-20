@@ -10,8 +10,7 @@ const routes: Routes = [
 
 { path: 'login', component: LoginComponent },
 { path: 'welcome', component: WelcomeComponent},
-//{ path: '**', redirectTo: 'login', pathMatch: 'full' }
-//{ path: '**', redirectTo: 'login', pathMatch: 'full' }
+{ path: '*', redirectTo: 'login', pathMatch: 'full' }
 
 
 
